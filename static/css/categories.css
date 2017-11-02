@@ -12,10 +12,10 @@ body {
 	float: left;
 	width: 16.6%;
 	text-align: center;
-	padding: 300px 0px;
+	padding: 400px 0px;
 }
 
-.column.col1:hover{
+.column:hover{
 	color: white;
 	font-size: 15px;
 	border-radius: 10px;
