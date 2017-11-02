@@ -9,11 +9,28 @@ body {
 /* Create three equal columns that floats next to each other */
 .column {
 	font-size: 12px;
-    float: left;
-    width: 16.5%;
+	float: left;
+	width: 16.6%;
 	text-align: center;
-	padding: 300px 0px;
+	padding: 400px 0px;
 }
+
+.column:hover{
+	color: white;
+	font-size: 15px;
+	border-radius: 10px;
+	background: #c71002 url('../images/lari.png') no-repeat fixed center;
+	
+}
+
+/*
+.column:hover{
+	color: white;
+	font-size: 15px;
+	border-radius: 10px;
+	background: #c71002 url('../images/larila-01.png') no-repeat fixed center;	
+}
+*/
 
 
 
@@ -30,4 +47,3 @@ body {
         width: 100%;
     }
 }
-
