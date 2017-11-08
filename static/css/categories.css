@@ -1,37 +1,21 @@
+html{
+    height: 100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+    
+
 body {
+	margin: 0px;
+	height: 100%; /* force the BODY element to match the height of the HTML element */
 	background-image: url("../images/waterman.png");
 	background-size: cover;
 	font-family: "Bebas Neue", "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
 
 
-
-/* Create three equal columns that floats next to each other */
-.column {
-	font-size: 12px;
-	float: left;
-	width: 16.6%;
-	text-align: center;
-	padding: 400px 0px;
-}
-
-.column:hover{
-	color: white;
-	font-size: 15px;
-	border-radius: 10px;
-	background: #c71002 url('../images/lari.png') no-repeat fixed center;
+.row {
 	
 }
-
-/*
-.column:hover{
-	color: white;
-	font-size: 15px;
-	border-radius: 10px;
-	background: #c71002 url('../images/larila-01.png') no-repeat fixed center;	
-}
-*/
-
 
 
 /* Clear floats after the columns */
@@ -39,7 +23,48 @@ body {
     content: "";
     display: table;
     clear: both;
+	
 }
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+	font-size: 12px;
+	float: left;
+	width: 16.666%;
+	height: 100vh;
+	text-align: center;
+	vertical-align: middle;
+	/*padding: 400px 0px 100px 0px;*/
+}
+
+.column:hover{
+	color: white;
+	font-size: 17px;
+	padding-top: 20px;
+}
+
+.column.col1:hover{
+	background: #c71002 url('../images/lari.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+.column.col2:hover{
+	background: #c71002 url('../images/badminton.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+.column.col3:hover{
+	background: #c71002 url('../images/futsal-01.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+.column.col4:hover{
+	background: #c71002 url('../images/futsal.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width:600px) {
