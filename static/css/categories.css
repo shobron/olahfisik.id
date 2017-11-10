@@ -41,7 +41,7 @@ body {
 .column:hover{
 	color: white;
 	font-size: 17px;
-	padding-top: 20px;
+	
 }
 
 .column.col1:hover{
@@ -60,7 +60,18 @@ body {
 }
 
 .column.col4:hover{
-	background: #c71002 url('../images/futsal.png') no-repeat fixed center;
+	background: #c71002 url('../images/renang-01.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+
+.column.col5:hover{
+	background: #c71002 url('../images/senam.png') no-repeat fixed center;
+	background-size: cover;
+}
+
+.column.col6:hover{
+	background: #c71002 url('../images/ping-01.png') no-repeat fixed center;
 	background-size: cover;
 }
 
