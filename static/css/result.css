@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-image: url("../images/index-01.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+
+h1 {
+	font-family: "Bebas Neue";
+	text-align: center;
+	
+}
+
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 270px;
+	height: 270px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
