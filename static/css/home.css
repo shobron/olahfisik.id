@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body {
-    background-image: url("../images/waterman.png");
+    background-image: url("../images/index-01.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,6 +11,8 @@ body {
 .cari {
 	text-align: center;
 	vertical-align: middle;
+	margin-top: 23%;
+	
 }
 
 #search {
@@ -20,7 +22,7 @@ body {
 
 
 input[type=text] {
-    width: 60%;
+    width: 40%;
     box-sizing: border-box;
     border: 2px solid #c71002;
     border-radius: 10px;

@@ -2,15 +2,15 @@
 /* CSS Document */
 
 body {
-    background-image: url("../images/index-01.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-	margin-left: 10%;
-	margin-right: 10%;
+    margin: 0px;
+	height: 100%; /* force the BODY element to match the height of the HTML element */
+	background-image: url("../images/index-01.png");
+	background-size: cover;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-bottom: 5%;
 	margin-top: 5%;
+	font-family: "Bebas Neue", "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
 
 
@@ -42,3 +42,11 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
+
+div.ket {
+	float: left;
+	margin-left: 40px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+
