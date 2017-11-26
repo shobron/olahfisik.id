@@ -1,1 +1,4 @@
 .vs/
+olahfisik/__pycache__/
+
+*.pyc
