@@ -19,8 +19,8 @@ from olahfisik import views as olahfisik_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^', olahfisik_views.index_view, name='index'),
-    url(r'^', olahfisik_views.categories_view, name='categories'),
+    url(r'^$', olahfisik_views.index_view, name='index'),
+    url(r'^categories/', olahfisik_views.categories_view, name='categories'),
     # url(r'^', olahfisik_views.results_view, name='results'),
     # url(r'^details/', olahfisik_views.details_view, name='details')
 ]
