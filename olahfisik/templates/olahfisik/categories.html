@@ -11,12 +11,20 @@
 
 
  <div class="row">
-    <div class="column col1"><h1>Lari</h1></div>
-    <div class="column col2"><h1>Badminton</h1></div>
-    <div class="column col3"><h1>Futsal</h1></div>
-    <div class="column col4"><h1>Renang</h1></div>
-    <div class="column col5"><h1>Senam</h1></div>
-    <div class="column col6"><h1>Pingpong</h1></div>
+    <a href="{% url 'results' %}">
+        <div class="column col1">
+            <h1 style="color:black">Lari</h1>
+        </div>
+    </a>
+    <a href="{% url 'results' %}">
+        <div class="column col2">
+            <h1 style="color:black">Badminton</h1>
+        </div>
+    </a>
+    <a href="{% url 'results' %}"><div class="column col3"><h1 style="color:black">Futsal</h1></div></a>
+    <a href="{% url 'results' %}"><div class="column col4"><h1 style="color:black">Renang</h1></div></a>
+    <a href="{% url 'results' %}"><div class="column col5"><h1 style="color:black">Senam</h1></div></a>
+    <a href="{% url 'results' %}"><div class="column col6"><h1 style="color:black">Pingpong</h1></div></a>
 </div>
             
 
