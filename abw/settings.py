@@ -25,7 +25,7 @@ SECRET_KEY = 'qw60*!d1_v$prn_d7m*al39!!!qs7aw8jy-qg56b#+-2l1+mm1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-54-254-196-119.ap-southeast-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -123,3 +123,4 @@ STATIC_URL = '/static/'
 #     os.path.join(BASE_DIR, '/static'),
 #     os.path.join(BASE_DIR, 'static')
 # ]
+STATIC_ROOT = "/home/ubuntu/abw/olahfisik/static"
