@@ -1,0 +1,110 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{% static "css/details.css" %}">
+        <link rel="icon" href="{% static "images/favicon.ico" %}">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            #map{
+                height:400px;
+                width:400px;
+                float: left;
+            }
+        </style>
+        <title>Detail | Olahfisik</title>
+    </head>
+
+    <body>
+      <a href="{% url 'index' %}"; class="waves-effect waves-light btn"><i style="color:beige; position: absolute;
+        top: 30px;
+        left: 120px;
+        font-size: 70px" class="material-icons right">home</i></a>
+      <div class="judul">
+            <h2 style="text-align: center;">{{venue.name}}</h2>
+            <br><br>
+        </div>
+        
+        
+        <div id="map"></div>
+        <script>
+          function initMap(){
+            // Map options
+            var options = {
+              zoom: 15,
+              center:{lat: {{venue.longitude}},lng: {{venue.latitude}}}
+            }
+      
+            // New map
+            var map = new google.maps.Map(document.getElementById('map'), options);
+      
+            // Listen for click on map
+            google.maps.event.addListener(map, 'click', function(event){
+              // Add marker
+              addMarker({coords:event.latLng});
+            });
+      
+            // Array of markers
+            var markers = [
+              {
+                coords:{lat: {{venue.longitude}}, lng: {{venue.latitude}}},
+                content:'<h3>{{venue.name}}</h3><p>{{venue.address}}</p>'
+              }
+            ];
+      
+            // Loop through markers
+            for(var i = 0;i < markers.length;i++){
+              // Add marker
+              addMarker(markers[i]);
+            }
+      
+            // Add Marker Function
+            function addMarker(props){
+              var marker = new google.maps.Marker({
+                position:props.coords,
+                map:map,
+                //icon:props.iconImage
+              });
+      
+              // Check for customicon
+              if(props.iconImage){
+                // Set icon image
+                marker.setIcon(props.iconImage);
+              }
+      
+              // Check content
+              if(props.content){
+                var infoWindow = new google.maps.InfoWindow({
+                  content:props.content
+                });
+      
+                marker.addListener('click', function(){
+                  infoWindow.open(map, marker);
+                });
+              }
+            }
+          }
+        </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3ei7lBGuEBQrZbcA9yfJAEk2nGZ82mC0&callback=initMap">
+        </script>
+        
+        <div class="ket">
+            <p>Alamat : {{venue.address}}</p>
+            <p>Telepon/HP : {{venue.telephone}}</p>
+            <p>Jam Buka : {{venue.open}}</p>
+            <p>Jam Buka : {{venue.close}}</p>
+            <p>Waktu yang disarankan : {{venue.busy}}</p>
+            <p>Rating : {{venue.rating}}</p>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{% static "js/materialize.min.js" %}"></script>
+    </body>
+</html>

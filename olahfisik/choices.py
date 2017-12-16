@@ -1,0 +1,14 @@
+RUN = 1
+BADMINTON = 2
+FUTSAL = 3
+SWIM = 4
+GYMNASTIC = 5
+PINGPONG = 6
+TYPE_CHOICES = (
+	('1','RUN'),
+	('2','BADMINTON'),
+	('3','FUTSAL'),
+	('4','SWIM'),
+	('5','GYMNASTIC'),
+	('6','PINGPONG')
+)

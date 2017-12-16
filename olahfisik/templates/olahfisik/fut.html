@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+				<!--Import materialize.css-->
+				<link type="text/css" rel="stylesheet" href="{% static "css/materialize.css" %}">
+				<link type="text/css" rel="stylesheet" href="{% static "css/materialize.min.css" %}">
+        <link type="text/css" rel="stylesheet" href="{% static "css/result.css" %}">
+        <link rel="icon" href="{% static "images/favicon.ico" %}">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Hasil Pencarian | Olahfisik</title>
+    </head>
+
+    <body>
+        <div>
+            <h1>Hasil pencarian:</h1>
+        </div>
+
+				<div class="row">
+					{% for venue in venues %}
+							<div class="col s12 m6">
+								<div class="card orange darken-3">
+									<div class="card-content white-text">
+										<span class="card-title">{{venue.name}}</span>
+										<p style="width: 450px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Ini adalah {{venue.name}}, yang beralamat di {{venue.address}}.</p>
+									</div>
+									<div class="card-action">
+										<a href="{% url 'details' venue.id%}">Read More!</a>
+									</div>
+								</div>
+							</div>
+					{% endfor %}
+				</div>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{% static "js/materialize.min.js" %}"></script>
+    </body>
+</html>
